@@ -1,0 +1,37 @@
+classDiagram
+  class MusicPlayer {
+    <<interface>>
+    +tocar()
+    +pausar()
+    +selecionarMusica(String musica)
+  }
+
+  class Telephone {
+    <<interface>>
+    +ligar(String numero)
+    +atender()
+    +iniciarCorreioVoz()
+  }
+
+  class InternetBrowser {
+    <<interface>>
+    +exibirPagina(String url)
+    +adicionarNovaAba()
+    +atualizarPagina()
+  }
+
+  class iPhone {
+    +tocar()
+    +pausar()
+    +selecionarMusica(String musica)
+    +ligar(String numero)
+    +atender()
+    +iniciarCorreioVoz()
+    +exibirPagina(String url)
+    +adicionarNovaAba()
+    +atualizarPagina()
+  }
+
+  iPhone ..|> MusicPlayer
+  iPhone ..|> Telephone
+  iPhone ..|> InternetBrowser
